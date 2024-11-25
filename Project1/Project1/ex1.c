@@ -2,12 +2,10 @@
 #include <stdio.h>
 int main() {
 	int num = 0;
-	int* ptri;
-	scanf("%d", &num);
-	ptri = &num;
-	printf("Now num is: %d and his addres is %d\n", num, ptri);
-	*ptri = 50;
-	printf("Now num is: %d and his addres is %d\n", num, ptri);
-	*ptri = 80;
-	printf("Now num is: %d and his addres is %d\n", num, ptri);
+	int *ptri;
+	int array[] = { 0,2,3 };
+	printf("array[1]=%d\n", array[1]);
+	ptri = array;
+	*(ptri + 1) = 999;
+	printf("npw array[1]=%d\n", array[1]);
 }
